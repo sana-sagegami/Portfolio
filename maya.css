@@ -1,0 +1,146 @@
+body {
+  background: #fdf6f3 url("image/maya/background.png") no-repeat center center
+    fixed;
+  background-size: cover;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #555;
+  margin: 0;
+}
+.breadcrumb {
+  padding: 2rem 0 1rem 2.5rem;
+  font-size: 1.1rem;
+  color: #f38e8e;
+  background: #fff7f3;
+  border-bottom: 1px solid #ddd;
+  letter-spacing: 0.03em;
+}
+.breadcrumb a {
+  color: #f38e8e;
+  text-decoration: none;
+  font-weight: 500;
+}
+.breadcrumb-separator {
+  margin: 0 0.5em;
+  color: #f8b6b6;
+}
+.breadcrumb-current {
+  color: #f8b6b6;
+}
+.main-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem 1.5rem;
+}
+.hero-section {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+.maya-title {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #888;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.02em;
+  position: relative;
+}
+.maya-title::after {
+  content: "";
+  display: block;
+  width: 260px;
+  height: 80px;
+  background: radial-gradient(circle, #f8b6b6 0%, #fff7f3 80%);
+  filter: blur(32px);
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: 0.7;
+}
+.section-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #666;
+  margin: 2.5rem 0 1.2rem 0;
+  letter-spacing: 0.04em;
+  position: relative;
+}
+.section-title span {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.1em;
+}
+.summary-text {
+  text-align: center;
+  font-size: 1.08rem;
+  color: #888;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+.maya-visual-section {
+  margin-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+.maya-block {
+  margin-bottom: 2.5rem;
+}
+.maya-block-title {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #444;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.04em;
+}
+.maya-image-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.maya-image {
+  width: 320px;
+  max-width: 90vw;
+  background: #666;
+  border-radius: 8px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+}
+.hand-main {
+  margin-bottom: 1.5rem;
+}
+.maya-balloon {
+  position: absolute;
+  right: -1.5em;
+  top: 1.5em;
+  background: #444;
+  color: #fff;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  padding: 0.3em 0.9em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  white-space: nowrap;
+  z-index: 2;
+}
+.maya-hands-row {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-top: 1.2rem;
+}
+.maya-hands-row .maya-image-wrap {
+  flex: 1 1 0;
+}
+@media (max-width: 900px) {
+  .main-content {
+    padding: 0 0.5rem 2rem 0.5rem;
+  }
+  .maya-image {
+    width: 98vw;
+    max-width: 98vw;
+  }
+  .maya-hands-row {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+}
