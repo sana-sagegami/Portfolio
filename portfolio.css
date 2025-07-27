@@ -5,9 +5,9 @@ body {
   font-family: "Noto Sans JP", sans-serif;
   color: #555;
   margin: 0;
-    padding-top: 3.5rem;
-
+  padding-top: 3.5rem;
 }
+
 .navbar {
   position: fixed;
   top: 0;
@@ -77,45 +77,27 @@ body {
   margin: 0 0.5rem;
   font-weight: 300;
 }
-.breadcrumb {
-  padding: 2rem 0 1rem 2.5rem;
-  font-size: 1.1rem;
-  color: #f38e8e;
-  background: #fff7f3;
-  border-bottom: 1px solid #ddd;
-  letter-spacing: 0.03em;
-}
-.breadcrumb a {
-  color: #f38e8e;
-  text-decoration: none;
-  font-weight: 500;
-}
-.breadcrumb-separator {
-  margin: 0 0.5em;
-  color: #f8b6b6;
-}
-.breadcrumb-current {
-  color: #f8b6b6;
-}
+
+
 .main-content {
   max-width: 900px;
   margin: 0 auto;
-  padding: 3.5rem 1.5rem 3rem 1.5rem; 
+  padding: 4rem 1.5rem 3rem 1.5rem;
 }
-.hero-section {
+
+.logo-title {
   text-align: center;
-  margin-top: 2.5rem;
-}
-.maya-title {
   font-family: "Playfair Display", serif;
   font-size: 3rem;
   font-weight: 700;
   color: #4B4B4B;
+  margin-top: 4rem;
   margin-bottom: 2.5rem;
-  letter-spacing: 0.02em;
-  position: relative;
+  letter-spacing: 0.04em;
+  filter: drop-shadow(0 0 40px #f8b6b6);
 }
-.maya-title::after {
+
+.logo-title::after {
   content: "";
   display: block;
   width: 260px;
@@ -159,59 +141,45 @@ body {
   margin: 1.2em auto 0 auto;
   border-radius: 1px;
 }
-.maya-visual-section {
+
+.works-section {
   margin-top: 2.5rem;
-  padding-bottom: 2.5rem;
 }
-.maya-block {
-  margin-bottom: 2.5rem;
-}
-.maya-block-title {
-  text-align: center;
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #444;
-  margin-bottom: 1.2rem;
+
+.works-title {
+  font-size: 1.1rem;
+  color: #888;
+  margin: 2.5rem 0 1rem 0;
+  font-weight: 500;
   letter-spacing: 0.04em;
 }
-.maya-image-wrap {
+
+.works-grid {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-.maya-image {
-  width: 320px;
-  max-width: 90vw;
-  background: #666;
-  border-radius: 8px;
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
-}
-.hand-main {
-  margin-bottom: 1.5rem;
-}
-.maya-balloon {
-  position: absolute;
-  right: 10em;
-  top: 1.5em;
-  background: #444;
-  color: #fff;
-  font-size: 0.95rem;
-  border-radius: 8px;
-  padding: 0.3em 0.9em;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  white-space: nowrap;
-  z-index: 2;
-}
-.maya-hands-row {
-  display: flex;
-  justify-content: center;
   gap: 2.5rem;
-  margin-top: 1.2rem;
+  justify-content: center;
+  margin-bottom: 2rem;
 }
-.maya-hands-row .maya-image-wrap {
-  flex: 1 1 0;
+
+.work-img {
+  width: 240px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #f8b6b6;
+  background: #fff;
 }
+
+.works-row {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+.works-row > div {
+  flex: 1;
+  text-align: center;
+}
+
 .back-btn-wrap {
   display: flex;
   justify-content: center;
@@ -228,23 +196,23 @@ body {
   text-decoration: none;
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
   transition: background 0.2s, color 0.2s;
-    margin-bottom: 5%;
-
+  margin-bottom: 5%;
 }
 .back-btn:hover {
   background: #f38e8e;
   color: #fff;
 }
+
 @media (max-width: 900px) {
   .main-content {
-    padding: 0 0.5rem 2rem 0.5rem;
+    padding: 2rem 0.5rem 2rem 0.5rem;
   }
-  .maya-image {
-    width: 98vw;
-    max-width: 98vw;
-  }
-  .maya-hands-row {
+  .works-grid, .works-row {
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 1.5rem;
+  }
+  .work-img {
+    width: 90vw;
+    max-width: 320px;
   }
 }
