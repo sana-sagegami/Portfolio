@@ -85,13 +85,12 @@ body {
   font-weight: 300;
 }
 
-/* Main Content */
+
 .main-content {
   padding-top: 80px;
   min-height: 100vh;
 }
 
-/* About Section */
 .about-section {
   position: relative;
   padding: 4rem 2rem 6rem;
@@ -273,7 +272,7 @@ body {
   letter-spacing: 0.05em;
 }
 
-/* Details Section */
+
 .details-section {
   position: relative;
   padding: 4rem 2rem;
@@ -351,10 +350,21 @@ body {
   color: #666;
   margin-bottom: 4rem;
   letter-spacing: 0.1em;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-  background-image: url("./image/design/titleblur.png"); 
-  background-repeat: no-repeat;
-  background-position: center; /* Center the background image */
+  position: relative;
+  z-index: 2;
+}
+
+.logo-glow {
+  position: absolute;
+  left: 50%;
+  top: 15%;
+  width: 300px;
+  height: 180px;
+  background: radial-gradient(circle, #f8b6b6 0%, #fff7f3 80%);
+  filter: blur(32px);
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  opacity: 0.7;
 }
 
 .skills-container {
@@ -428,10 +438,7 @@ body {
   transition: all 0.3s ease;
 }
 
-.skill-item:hover .skill-icon {
-  filter: brightness(1.2) contrast(1.2);
-  transform: scale(1.1);
-}
+
 
 @media (max-width: 768px) {
   .navbar {
@@ -505,8 +512,14 @@ body {
 
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    padding: 2rem 1.5rem;
+    gap: 0.5rem;
+    padding: 4rem 1.5rem;
+    justify-items: center;     
+    margin-left: auto;          
+    margin-right: auto;         
+  }
+  .skill-item {
+    width: 100px;
   }
 
   .skill-icon {
@@ -564,12 +577,10 @@ body {
   }
 }
 
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Enhanced animations - simplified without keyframes */
 .profile-container {
   opacity: 1;
   transform: translateY(0);
@@ -595,7 +606,6 @@ html {
   transform: scale(1);
 }
 
-/* Additional blur and glass effects */
 .about-section::before {
   content: "";
   position: absolute;

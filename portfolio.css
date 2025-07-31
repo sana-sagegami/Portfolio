@@ -1,7 +1,6 @@
 body {
-  background: #fdf6f3 url("image/maya/background.png") no-repeat center center
-    fixed;
-  background-size: cover;
+  background: #fdf6f3;
+
   font-family: "Noto Sans JP", sans-serif;
   color: #555;
   margin: 0;
@@ -207,12 +206,43 @@ body {
   .main-content {
     padding: 2rem 0.5rem 2rem 0.5rem;
   }
+    .summary-text {
+    font-size: 0.9rem;
+  }
   .works-grid, .works-row {
     flex-direction: column;
     gap: 1.5rem;
   }
   .work-img {
     width: 90vw;
-    max-width: 320px;
+    max-width: 220px;
   }
+    .works-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.8rem 1rem;
+  }
+
+  .nav-links {
+    gap: 0.3rem;
+  }
+
+  .nav-link {
+    font-size: 0.8rem;
+    letter-spacing: 0.3px;
+  }
+
+  .nav-separator {
+    margin: 0 0.3rem;
+    font-size: 0.8rem;
+  }
+
 }

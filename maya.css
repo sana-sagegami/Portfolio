@@ -1,12 +1,10 @@
 body {
-  background: #fdf6f3 url("image/maya/background.png") no-repeat center center
-    fixed;
+  background: #fdf6f3;
   background-size: cover;
   font-family: "Noto Sans JP", sans-serif;
   color: #555;
   margin: 0;
-    padding-top: 3.5rem;
-
+  padding-top: 3.5rem;
 }
 .navbar {
   position: fixed;
@@ -100,7 +98,7 @@ body {
 .main-content {
   max-width: 900px;
   margin: 0 auto;
-  padding: 3.5rem 1.5rem 3rem 1.5rem; 
+  padding: 3.5rem 1.5rem 3rem 1.5rem;
 }
 .hero-section {
   text-align: center;
@@ -110,7 +108,7 @@ body {
   font-family: "Playfair Display", serif;
   font-size: 3rem;
   font-weight: 700;
-  color: #4B4B4B;
+  color: #4b4b4b;
   margin-bottom: 2.5rem;
   letter-spacing: 0.02em;
   position: relative;
@@ -212,6 +210,12 @@ body {
 .maya-hands-row .maya-image-wrap {
   flex: 1 1 0;
 }
+
+.maya-hands-row .maya-image-wrap:last-child .maya-image,
+.maya-hands-row .maya-image-wrap:nth-last-child(2) .maya-image {
+  max-width: 300px;
+  width: 100%;
+}
 .back-btn-wrap {
   display: flex;
   justify-content: center;
@@ -226,10 +230,9 @@ body {
   font-size: 1rem;
   font-weight: 500;
   text-decoration: none;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
   transition: background 0.2s, color 0.2s;
-    margin-bottom: 5%;
-
+  margin-bottom: 5%;
 }
 .back-btn:hover {
   background: #f38e8e;
@@ -239,12 +242,68 @@ body {
   .main-content {
     padding: 0 0.5rem 2rem 0.5rem;
   }
-  .maya-image {
-    width: 98vw;
-    max-width: 98vw;
+  .summary-text {
+    font-size: 0.9rem;
   }
   .maya-hands-row {
-    flex-direction: column;
+    flex-wrap: wrap;
+    flex-direction: row;
     gap: 1.2rem;
+    justify-content: center;
+  }
+  .maya-hands-row .maya-image-wrap {
+    flex: 0 1 45%;
+    max-width: 45vw;
+    margin-bottom: 1.2rem;
+  }
+
+  .maya-image {
+    width: 100%;
+    max-width: 220px;
+  }
+
+  .maya-hands-row .maya-image-wrap:last-child .maya-image,
+  .maya-hands-row .maya-image-wrap:nth-last-child(2) .maya-image {
+    max-width: 390px;
+  }
+}
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.8rem 1rem;
+  }
+
+  .nav-links {
+    gap: 0.3rem;
+  }
+
+  .nav-link {
+    font-size: 0.8rem;
+    letter-spacing: 0.3px;
+  }
+
+  .nav-separator {
+    margin: 0 0.3rem;
+    font-size: 0.8rem;
+  }
+
+  .maya-hands-row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1.2rem;
+    justify-content: center;
+  }
+  .maya-hands-row .maya-image-wrap {
+    flex: 0 1 45%;
+    max-width: 45vw;
+    margin-bottom: 1.2rem;
+  }
+  .maya-balloon {
+    right: 0em;
+    font-size: 0.75rem;
+  }
+
+  .maya-image {
+    width: 58vw;
   }
 }

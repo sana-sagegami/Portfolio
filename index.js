@@ -1,6 +1,6 @@
-// ポートフォリオサイトの機能
+
 document.addEventListener("DOMContentLoaded", function () {
-  // スムーズスクロール（古いブラウザ対応）
+
   const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
   smoothScrollLinks.forEach((link) => {
     link.addEventListener("click", function (e) {
@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // パララックス効果（星の動き）
   window.addEventListener("scroll", function () {
     const scrolled = window.pageYOffset;
     const parallaxElements = document.querySelectorAll(".star");
@@ -29,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // インターセクションオブザーバーでアニメーション最適化
+
   const observerOptions = {
     threshold: 0.1,
     rootMargin: "0px 0px -50px 0px",
@@ -43,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }, observerOptions);
 
-  // アニメーション対象要素の監視
+
   const animatedElements = document.querySelectorAll(
     ".profile-container, .details-grid, .skills-container"
   );
@@ -52,14 +51,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// タッチデバイス対応
+
 if ("ontouchstart" in window) {
   document.body.classList.add("touch-device");
 }
 
-// パフォーマンス最適化
+
 window.addEventListener("load", function () {
-  // 画像の遅延読み込み
+
   const images = document.querySelectorAll("img[data-src]");
   const imageObserver = new IntersectionObserver(function (entries) {
     entries.forEach((entry) => {
